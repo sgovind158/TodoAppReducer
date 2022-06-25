@@ -12,4 +12,5 @@ const rootReducer = combineReducers({
     todo: todoReducer
 })
 
+
 export const store = legacy_createStore(rootReducer,composeEnhancer(applyMiddleware(thunk)))

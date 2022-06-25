@@ -1,22 +1,14 @@
 {
   "todos": [
     {
-      "value": "ffffffff",
-      "id": 3
-    },
-    {
-      "value": "what is your name ",
+      "value": "nachiket lele ",
+      "isCompleted": true,
       "id": 4
     },
     {
-      "value": "govind sahu ",
+      "value": "one to",
       "isCompleted": false,
       "id": 5
-    },
-    {
-      "value": "aaaaaaaaa",
-      "isCompleted": false,
-      "id": 6
     }
   ]
 }

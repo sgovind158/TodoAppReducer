@@ -1,6 +1,6 @@
 import * as types  from "../Todos/action.types"
 
-
+let todoObj = localStorage.getItem("todoObj")
 let initState = {
     addTodos:{
         loading:false,
@@ -30,6 +30,7 @@ export const todoReducer = (state = initState, action)=>{
      }
 
      case types.GETTODOSSUCCESS:{
+       localStorage.setItem("todoObj",JSON.stringify(payload))
 
         return {
             ...state,
@@ -39,9 +40,14 @@ export const todoReducer = (state = initState, action)=>{
                 error:false
             },
 
-            data:payload
+            data:payload,
+           
         }
 
+      
+
+
+        
     }
 
 
@@ -70,7 +76,9 @@ export const todoReducer = (state = initState, action)=>{
 
 
     case types.ADDTODOSSUCCESS:{
-
+        // localStorage.setItem("addDataObj",  JSON.stringify(payload))
+//   let payload = localStorage.getItem("addDataObj")
+  console.log("payload", payload)
         return {
             ...state,
             addTodos:{

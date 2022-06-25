@@ -23,6 +23,7 @@ export const addTodos = (payload)=>(dispatch)=>{
 
     axios.post("http://localhost:8080/todos",payload)
     .then((res)=>{
+        console.log(res.data,"data")
         dispatch({type:types.ADDTODOSSUCCESS ,payload:res.data})
     })
     .catch((error)=>{
@@ -64,18 +65,38 @@ export const deleteTodo = (id)=>(dispatch)=>{
     
 }
 
-export const completeTodo = (id)=>(dispatch)=>{
+export const completeTodo = (id,status)=>(dispatch)=>{
    
   
 
     // const {id,  upDate} = payload;
-    axios.get(`http://localhost:8080/todos/${id}/`,).then(res => {
-        dispatch({type:types.COMPLETETODO ,payload:id})
-    
-    console.log(res.data);
-}).catch(error => {
 
-    console.log(error);
-});
+  axios.patch(`http://localhost:8080/todos/${id}/`,{
+    isCompleted : status
+  }).then((res)=>{
+
+    dispatch({type:types.COMPLETETODO ,payload:res.data})
+
+
+    axios.get("http://localhost:8080/todos")
+    .then((res)=>{
+        dispatch({type : types.GETTODOSSUCCESS , payload : res.data})
+    })
+     .catch((error)=>{
+        dispatch({type: types.GETTODOSERROR})
+     })
+
+  }).catch((err)=>{
+    console.log(err)
+  })
+
+//     axios.get(`http://localhost:8080/todos/${id}/`,).then(res => {
+       
+    
+//     console.log(res.data);
+// }).catch(error => {
+
+//     console.log(error);
+// });
     
 }

@@ -5,8 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(153, 196, 51);
+  color: aliceblue;
+  font-size: 20px;
 }
-
+button{
+  width: 50px;
+  height: 30px;
+  background-color: aqua;
+}
+input{
+  width: 400px;
+  height: 30px;
+  background-color: rgb(23, 25, 128);
+  color: wheat;
+  font-size: 25px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

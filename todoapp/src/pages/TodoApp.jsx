@@ -6,6 +6,8 @@ import { useState } from 'react'
 const TodoApp = () => {
     const dispatch = useDispatch()
     const {data:todos, addTodos:aTodo, getTodos:gTodo } = useSelector((state)=>state.todo)
+    // localStorage.setItem("todoArr",JSON.stringify(todos))
+    console.log(todos,"apptodoline no 10")
     const ref = useRef()
     const [value ,setUpDate] = useState("")
     let navigate = useNavigate()
@@ -29,8 +31,8 @@ const deleteTodoData = (id)=>{
     dispatch(types.deleteTodo(id))
 }
 
-const toggleTaskStutus = (id)=>{
-    dispatch(types.completeTodo(id))
+const toggleTaskStutus = (id, status)=>{
+    dispatch(types.completeTodo(id,status))
 }
 
 const EditTodo = (id,value)=>{
@@ -69,7 +71,7 @@ if(gTodo.loading){
               
               </div>
               
-              <input type="checkbox"  checked = {todo.isCompleted} onChange ={()=>toggleTaskStutus(todo.id,todo)}  style={{ textDecorationLine: 'line-through' }} />
+              <input type="checkbox"  checked = {todo.isCompleted} onChange ={()=>toggleTaskStutus(todo.id,!todo.isCompleted)}  style={{ textDecorationLine: 'line-through' }} />
                 </div>
 
                
