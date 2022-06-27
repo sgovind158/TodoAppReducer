@@ -57,7 +57,48 @@ export const authReducer = (state = initState, action)=>{
             isAuth:false,
         }
     }
+// /////////pratice1
 
+case types.AUTHLOADING_1 :
+
+   return{
+    ...state,
+    loading :true,
+    error : false
+   }
+
+   case types.AUTHSUCCESS_1 :
+     localStorage.setItem("token",payload.token)
+
+     return{
+        ...state,
+        loading:false,
+        error:false,
+        isAuth:true,
+        token: payload.token
+     }
+
+
+     case types.AUTHERROR_1:
+
+       return{
+          ...state,
+          loading:false,
+          error:true,
+          isAuth:false
+       }
+
+
+       case types.AUTHLOGOUT_1:
+        localStorage.removeItem("token")
+        return{
+            ...state,
+            loading:false,
+            isAuth:false,
+            token:""
+        }
+
+///////////pratice1
     default:{
         return state
     }

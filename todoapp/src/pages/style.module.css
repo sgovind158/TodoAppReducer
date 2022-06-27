@@ -1,0 +1,32 @@
+.bigBox{
+    width: 50%;
+    height: auto;
+    border: 1px solid rgb(70, 41, 136);
+    background-color: rgb(206, 206, 50);
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    color: wheat;
+}
+
+
+.bigBox div>button{
+    width: 80px;
+    height: 50px;
+    border: blue;
+    background-color: rgb(132, 13, 143);
+     border-radius: 10px;
+}
+
+
+.deletebtn{
+    width: 80px;
+    height: 50px;
+    border: rgb(59, 2, 2);
+    background-color: rgb(228, 46, 13);
+     border-radius: 10px;
+     margin-top: 48px;
+    
+}
+

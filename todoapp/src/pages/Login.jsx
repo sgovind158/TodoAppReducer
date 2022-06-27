@@ -48,7 +48,7 @@ const handleChange = (e)=>{
              placeholder="enter your email"
                onChange={handleChange} />
 
-<input type="password"
+          <input type="password"
            name = "password"
              value={loginCreads.password}
              placeholder="enter your password"

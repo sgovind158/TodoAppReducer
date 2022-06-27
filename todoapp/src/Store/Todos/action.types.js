@@ -15,3 +15,27 @@ export const  ADDTODO = "ADDTODO"
 export const  UPDATETODO = "UPDATETODO"
 export const   DELETETODO = "DELETETODO"
 export const   COMPLETETODO = "COMPLETETODO"
+
+
+
+//    pratce 1 start here 
+
+export const  GETTODOSLOADING_P1 = "GETTODOSLOADING_P1"
+export const  GETTODOSSUCCESS_P1 = "GETTODOSSUCCESS_P1"
+export const  GETTODOSERROR_P1 = "GETTODOSERROR_P1"
+
+
+export const  ADDTODOSLOADING_P1 = "ADDTODOSLOADING_P1"
+export const  ADDTODOSSUCCESS_P1 = "ADDTODOSSUCCESS_P1"
+export const  ADDTODOSERROR_P1 = "ADDTODOSERROR_P1"
+
+
+
+export const  ADDTODO_P1 = "ADDTODO_P1"
+export const  UPDATETODO_P1 = "UPDATETODO_P1"
+export const   DELETETODO_P1 = "DELETETODO_P1"
+export const   COMPLETETODO_P1 = "COMPLETETODO_P1"
+
+
+// preatice 1 end here
+
